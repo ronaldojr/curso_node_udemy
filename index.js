@@ -1,17 +1,13 @@
-const http = require('http');
+const porta = 3000;
+const express = require('express');
 
-let server = http.createServer((req, res) => {
-	
-	let url = req.url;
+const app = express();
 
-	if (url == "/um") {
-		res.end("Requisicao UM");	
-	} else if (url  == "/dois") {
-		res.end("Requisicao DOIS");
-	} else {
-		res.end("Rota nao existe, erro 404");
-	}
-	
+app.get('/', (req,res) => {
+	res.send("home");
 });
 
-server.listen(3000);
+
+app.listen(porta, () => {
+	console.log(`escutando na porta ${porta}`);
+});
