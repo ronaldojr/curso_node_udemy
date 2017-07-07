@@ -1,5 +1,5 @@
 {
-  "name": "secao02",
+  "name": "curso-node-udemy",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.6",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "mysql": "^2.13.0"
   }
 }
