@@ -15,5 +15,8 @@
     "express": "^4.15.3",
     "express-validator": "^3.2.1",
     "mysql": "^2.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }

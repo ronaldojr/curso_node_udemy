@@ -4,7 +4,7 @@ let connMySQL = () => {
 	return mysql.createConnection({
 		"host"    : 'localhost',
 		"user"    : 'root',
-		"password": '',
+		"password": 'root',
 		"database": 'curso_node'
 	})
 }
