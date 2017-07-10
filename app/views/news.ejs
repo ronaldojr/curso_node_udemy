@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<meta charset="utf-8"/>
+	<body>
+		<h1>News </h1>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Titulo</th>
+					<th>Noticia</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% noticias.forEach( noticia => { %>
+					<tr>
+						<td><%= noticia.titulo %></td>
+						<td><%= noticia.noticia %></td>
+					</tr>
+				<% }); %>
+			</tbody>
+		</table>
+	</body>
+</html>
