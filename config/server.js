@@ -8,14 +8,15 @@ const app = express()
 app.set('view engine', 'ejs')
 app.set('views', './app/views')
 
+app.use(express.static('./app/public'))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(expressValidator())
 
 consign()
-  .include('app/routes')
-  .then('config/dbConnection.js')
+  .include('/config/dbConnection.js')
   .then('app/models')
   .then('app/controllers')
+  .then('app/routes')
   .into(app)
 
 module.exports = { 

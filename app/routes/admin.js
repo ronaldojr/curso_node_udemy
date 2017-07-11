@@ -2,12 +2,11 @@
 
 module.exports = app => {
 
-	app.get('/noticia/cadastro', (req, res) => { 
-		app.app.controllers.admin.formulario_cadastro_noticia(app, req, res)
-    })
+	let controllers = app.app.controllers.admin
 
-	app.post('/noticia/salvar', (req, res) => {
-		app.app.controllers.admin.noticia_salvar(app, req, res)
-	})
+	app.get('/noticia/cadastro', controllers.formulario_cadastro_noticia)
+	app.post('/noticia/salvar', controllers.noticia_salvar)
+
+
 }
 
